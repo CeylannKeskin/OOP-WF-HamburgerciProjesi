@@ -1,0 +1,22 @@
+﻿using HamburgerciProjesi.Abstract;
+using HamburgerciProjesi.Enum;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HamburgerciProjesi.Concrete
+{
+    public class Menu : IMenu
+    {
+        public string MenuAdi { get; set; }
+        public decimal MenuFiyati { get; set; }
+        public int HazirlanmaSuresi { get; set; }
+        public BegenilmeOrani BegenilmeOrani { get; set; }
+        public override string ToString()
+        {
+            return $"{MenuAdi}, {MenuFiyati.ToString("C2")}, Hazirlanma={HazirlanmaSuresi} dk, BegenilmeOrani={BegenilmeOrani} ";
+        }
+    }
+}
